@@ -2,15 +2,8 @@
 
 This repository was created as a supporting material for the article comparing high-resolution global canopy height maps and exploring their applicability to biodiversity modeling in temperate biomes.
 
-#* What is the research about?*#
-
+**What is the research about?**
 Being directly linked to aboveground biomass and biodiversity, forest canopy height is a high-priority variable to be monitored from space. Recently, two global canopy height maps have been released, the Global Forest Canopy Height Map (GFCH) and the High-Resolution Canopy Height Model of the Earth (HRCH). We assessed their accuracy using canopy height models derived from airborne laser scanning in three areas of the temperate biome. Our results show the presence of large errors in the evaluated maps. The RMSE of GFCH was between 7-8 m while the RMSE of HRCH was between 10-16 m. HRCH was less sensitive to variation in vegetation height, resulting in poor estimates of canopy horizontal heterogeneity. Canopy height estimates in both maps were equally affected by terrain slope and orientation. Finally, biodiversity models using global canopy height maps lead to a considerable decrease in models’ discrimination ability and to mischaracterization of species niches.
-
-
-
-Comparison of high-resolution global canopy height maps and their applicability to biodiversity modeling in temperate biomes
-
-Previous work has documented the effect of positional uncertainty on model predictive performance, but its consequences for inference about species-environment relationships remains largely unknown.  In our study, we explored the extent to which parameter estimation is affected by positional uncertainty. In total, we simulated 12 560 combinations of virtual and real environmental data and virtual species (Workflows 1, 2) to investigate our assumptions and have fitted over 628 000 models. Additionally, we tested our assumptions using real environmental variables and real species (Band-tailed Pigeon; Workflow 3).
 
 **Relevant paper:**
 Here I will add the paper citation
@@ -22,7 +15,7 @@ Code authors: [Vítězslav Moudrý](https://scholar.google.cz/citations?user=aSI
 
 Date: 11/15/2022
 
-In this repository we provide used R scripts that can be used to recreate our study.
+In this repository we provide... used R scripts that can be used to recreate our study.
 
 **Environmental and species data**
 
