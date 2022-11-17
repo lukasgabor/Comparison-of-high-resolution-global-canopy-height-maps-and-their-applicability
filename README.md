@@ -11,11 +11,12 @@ Here I will add the paper citation
 Code authors: [Vítězslav Moudrý](https://scholar.google.cz/citations?user=aSI2lNEAAAAJ&hl=cs),
               [Jiří Prošek](https://scholar.google.cz/citations?user=TMVQtt4AAAAJ&hl=cs),
               [Lukáš Gábor](https://scholar.google.cz/citations?user=pLQXY5wAAAAJ&hl=cs)
+
+Cite the code:
+
+Cite the data:
               
-
 Date: 11/15/2022
-
-In this repository we provide... used R scripts that can be used to recreate our study.
 
 **Environmental and species data**
 
