@@ -47,17 +47,20 @@ library(ggplot2)
 setwd("PAthToYourData")
 
 # ALS LiDAR
-  ALS <- rast("EBR_ALS_CHM_10m.tif") 
+  ALS <- rast("EBR_ALS_CHM_10m.tif")
+  names(ALS) <- "ALS"
   #plot(ALS, asp=T)
   #ALS
 
 # HRCH Model (Lang et al. 2022)
   HRCH <- rast("EBR_HRCH_10m.tif") 
+  names(HRCH) <- "HRCH"
   #plot(HRCH, asp=T)
   #HRCH
 
 # GFCH Model (Potapov et al. 2021)
   GFCH <- rast("EBR_GFCH_30m.tif") 
+  names(GFCH) <- "GFCH"
   #plot(GFCH, asp=T)
   #GFCH 
 
@@ -97,19 +100,19 @@ setwd("PAthToYourData")
 
   # EXTRACT ALS CHM
   elevations_ALS <- extract(ALS, lns, xy=TRUE)
-  names(elevations_ALS)[names(elevations_ALS) == 'ALS_CHM_10m'] <- 'z'
+  names(elevations_ALS)[names(elevations_ALS) == 'ALS'] <- 'z'
   elevations_ALS$x <- elevations_ALS$x - Left
   elevations_ALS$ID <- "ALS"
   
   # EXTRACT HRCH
   elevations_HRCH <- extract(HRCH, lns, xy=TRUE)
-  names(elevations_HRCH)[names(elevations_HRCH) == 'HRCH_10m'] <- 'z'
+  names(elevations_HRCH)[names(elevations_HRCH) == 'HRCH'] <- 'z'
   elevations_HRCH$x <- elevations_HRCH$x - Left
   elevations_HRCH$ID <- "HRCH"
   
   # EXTRACT GFCH
   elevations_GFCH <- extract(GFCH, lns, xy=TRUE)
-  names(elevations_GFCH)[names(elevations_GFCH) == 'GFCH_30m'] <- 'z'
+  names(elevations_GFCH)[names(elevations_GFCH) == 'GFCH'] <- 'z'
   elevations_GFCH$x <- elevations_GFCH$x - Left
   elevations_GFCH$ID <- "GFCH"
   # Note that GFCH raster also contains values: 101 Water; 102 Snow/ice; 103 No data
