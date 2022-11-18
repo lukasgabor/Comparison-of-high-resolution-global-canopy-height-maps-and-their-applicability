@@ -31,6 +31,6 @@ The original airborne laser scanning data used for the generation of the canopy 
 
 *Lang, N., Jetz, W., Schindler, K., & Wegner, J. D. (2022). A high-resolution canopy height model of the Earth. arXiv preprint arXiv:2204.08322.*
 
-Used canopy height models can be downloaded from the Zenodo repository.
+Used canopy height data can be downloaded from the Zenodo repository, where EBR stands for Entlebuch Biosphere Reserve, MRF stands for Mount Richmond Forest and TAW stands for Trinity Alps Wilderness.
 
 Cite the data:
