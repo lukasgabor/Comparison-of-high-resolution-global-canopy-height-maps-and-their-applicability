@@ -27,7 +27,7 @@ Used canopy height data can be downloaded from the Zenodo repository, where EBR 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7332572.svg)](https://doi.org/10.5281/zenodo.7332572)
 
-**File Description:**
+**Files Description:**
 
 R_script_Raster_Profiles.R: Step-by-step guideline to generate profiles such as the examples in Figure 1b in the manuscript. This allows the readers to assess the accuracy of global canopy height maps within the three study areas.
 
