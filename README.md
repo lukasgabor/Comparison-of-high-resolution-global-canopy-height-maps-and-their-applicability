@@ -35,6 +35,6 @@ R_script_Virtual_species_niche.R: Step-by-step guideline to generate the probabi
 
 Code authors: [Vítězslav Moudrý](https://scholar.google.cz/citations?user=aSI2lNEAAAAJ&hl=cs), [Lukáš Gábor](https://scholar.google.cz/citations?user=pLQXY5wAAAAJ&hl=cs)
 
-Cite the code
+***Cite the code***
 
-*** ***
+[![DOI](https://zenodo.org/badge/566486768.svg)](https://zenodo.org/badge/latestdoi/566486768)
