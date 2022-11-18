@@ -23,7 +23,9 @@ The [Global Forest Canopy Height Map](https://glad.umd.edu/dataset/gedi) (GFCH, 
 
 Used canopy height data can be downloaded from the Zenodo repository, where EBR stands for Entlebuch Biosphere Reserve, MRF stands for Mount Richmond Forest and TAW stands for Trinity Alps Wilderness.
 
-Cite the data:
+***Cite the data***
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7332572.svg)](https://doi.org/10.5281/zenodo.7332572)
 
 **File Description:**
 
@@ -33,4 +35,6 @@ R_script_Virtual_species_niche.R: Step-by-step guideline to generate the probabi
 
 Code authors: [Vítězslav Moudrý](https://scholar.google.cz/citations?user=aSI2lNEAAAAJ&hl=cs), [Lukáš Gábor](https://scholar.google.cz/citations?user=pLQXY5wAAAAJ&hl=cs)
 
-Cite the code:
+Cite the code
+
+*** ***
