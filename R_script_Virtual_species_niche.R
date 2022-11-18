@@ -32,13 +32,12 @@
 # -----------------------------------------------------------
     
 # Set path to the data
-  setwd("PAthToYourData")   
-  setwd("H:/1_2022_UK_GEDI_GLOBAL_CHM_VALIDATION/13_GITHUB/_01_DATA/Entlebuch_Biosphere_Reserve") 
+  setwd("PAthToYourData")
 
-  ALS10 = "ALS_CHM_10m.tif"  
-  ALS30 = "ALS_CHM_30m.tif"
-  HRCH10 = "HRCH_10m.tif"
-  GFCH30 = "GFCH_30m.tif"
+  ALS10 = "EBR_ALS_CHM_10m.tif"  
+  ALS30 = "EBR_ALS_CHM_30m.tif"
+  HRCH10 = "EBR_HRCH_10m.tif"
+  GFCH30 = "EBR_GFCH_30m.tif"
 
 # Environment for Virtual species creation 
   
@@ -64,8 +63,6 @@
   plotResponse(my1_virtualspecies_10)
   plotResponse(my1_virtualspecies_30)
 
-
-
 # ENVIRONMENT for Virtual species EVALUATION (RASTER STACK)
 # VERSION FOR 10m
   Raster_stack_10 <- stack(ALS10, HRCH10)
@@ -74,7 +71,6 @@
   Raster_stack_30 <- stack(ALS30, GFCH30)
   names(Raster_stack_30) <- c("ALS30","GFCH30")
 
-      
 # Define variables
 # Sample size (Number of sampled presences and absences)
   N <- 800
@@ -94,7 +90,7 @@
     
 # --------------------------------------------------------------------------------
 #################################################################################
-# FOR CYKLUS
+# LOOP
 #################################################################################
 # --------------------------------------------------------------------------------
 
@@ -177,7 +173,6 @@ Test_30 <- splits_30$testset
     predict_HRCH10_2 <- as.vector(predict_HRCH10_2)
     NEW_Test_dat_EVALUATE_HRCH10 <- cbind(NEW_Test_dat_EVALUATE_HRCH10, predict_HRCH10_2)
 
-
 # --------------------------------------------------------------------------------
 #################################################################################
 # GLM Modelling 30 m using GFCH 
@@ -185,7 +180,6 @@ Test_30 <- splits_30$testset
 # --------------------------------------------------------------------------------
 Model_30 <- glm(Observed~GFCH30+I(GFCH30^2), family= binomial, data=Train_30)
 summary(Model_30)
-
 
 # --------------------------------
 # Model evaluation (AUC)  
@@ -214,7 +208,6 @@ summary(Model_30)
    predict_GFCH30_2 <- predict(Model_30, newdata=NEW_Test_dat_30, type="response")
    predict_GFCH30_2 <- as.vector(predict_GFCH30_2)
    NEW_Test_dat_EVALUATE_GFCH30 <- cbind(NEW_Test_dat_EVALUATE_GFCH30, predict_GFCH30_2)
-
 
 # --------------------------------------------------------------------------------
 #################################################################################
@@ -250,7 +243,7 @@ summary(Model1_ALS10)
    Predicted_ALS_2 <- as.vector(predict_ALS_2)
    NEW_Test_dat_EVALUATE_ALS <- cbind(NEW_Test_dat_EVALUATE_ALS, Predicted_ALS_2)
 
-}   # END OF FOR CYCLE 
+}   # END OF LOOP
 
   # -------------------------------------------
   # Calculate mean AUC and Standard deviation
@@ -298,7 +291,6 @@ summary(Model1_ALS10)
   #Probabilistic conversion of Environmental Suitability into Probability of Occurrence
    y2 <- 1/(1+exp((y-BETA)/ALPHA))
    
-   
   #Plot
    ggplot(NULL, aes(x = slope, y = as.numeric(ocupied))) +
      geom_ribbon(data = Response_, aes(ymin = Lower_ALS, ymax = Upper_ALS, x = ALS),
@@ -323,5 +315,3 @@ summary(Model1_ALS10)
            axis.title=element_text(colour="black", size=18),
            axis.text=element_text(colour="black", size=18),axis.line = element_line(colour = "black"),
            panel.border = element_rect(colour = "black", fill=NA, size=0.5))
-   
-   
