@@ -47,17 +47,17 @@ library(ggplot2)
 setwd("PAthToYourData")
 
 # ALS LiDAR
-  ALS <- rast("ALS_CHM_10m.tif") 
+  ALS <- rast("EBR_ALS_CHM_10m.tif") 
   #plot(ALS, asp=T)
   #ALS
 
 # HRCH Model (Lang et al. 2022)
-  HRCH <- rast("HRCH_10m.tif") 
+  HRCH <- rast("EBR_HRCH_10m.tif") 
   #plot(HRCH, asp=T)
   #HRCH
 
 # GFCH Model (Potapov et al. 2021)
-  GFCH <- rast("GFCH_30m.tif") 
+  GFCH <- rast("EBR_GFCH_30m.tif") 
   #plot(GFCH, asp=T)
   #GFCH 
 
@@ -67,7 +67,7 @@ setwd("PAthToYourData")
   #Read Coordinate system
   CRS <- crs(ALS)
   
-  # Here specify the Latitude and Longitude of start and end point of the transect
+  # Here specify the Latitude and Longitude of start and end point of the transect (do not use all study area extent)
   # The extent of the study areas are:
   # Entlebuch Biosphere Reserve; Trinity Alps Wilderness;  Mount Richmond Forest           
   #  Top    1215995               Top    4569000            Top    5500002
@@ -126,8 +126,6 @@ setwd("PAthToYourData")
   #p1 <- c(Left, Top)
   #p2 <- c(Right, Bottom)
   #las_tr <- clip_transect(las, p1, p2, width = 10, xz = TRUE)
-
-
   
 # -----------------------------------------------------------  
 # Plot profile
@@ -141,5 +139,3 @@ setwd("PAthToYourData")
     coord_fixed(ratio=1.7)+
     theme_bw()
   GRAF
-  
-# ----------------------------------------------------------- 
