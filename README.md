@@ -13,7 +13,7 @@ Date: 11/17/2022
 
 **Canopy Height Data**
 
-The original airborne laser scanning data used for the generation of the canopy height models were sourced from the [LINZ Data Service](https://data.linz.govt.nz/) and licensed for reuse under the CC BY 4.0 licence; the [Federal Office of Topography swisstopo](https://www.swisstopo.admin.ch/en/geodata/height/surface3d.html); and the [U.S. Geological Survey](https://apps.nationalmap.gov/downloader/).
+The original airborne laser scanning data (ALS) used for the generation of the canopy height models were sourced from the [LINZ Data Service](https://data.linz.govt.nz/) and licensed for reuse under the CC BY 4.0 licence; the [Federal Office of Topography swisstopo](https://www.swisstopo.admin.ch/en/geodata/height/surface3d.html); and the [U.S. Geological Survey](https://apps.nationalmap.gov/downloader/).
 
 The [Global Forest Canopy Height Map](https://glad.umd.edu/dataset/gedi) (GFCH, Potapov et al. 2021) and the [high-resolution canopy height model of the Earth](https://langnico.github.io/globalcanopyheight/) (HRCH, Lang et al. 2022) are provided free of charge, without restriction of use under Creative Commons Attribution 4.0 International License. Publications, models, and data products that make use of these datasets must include proper acknowledgement.
 
