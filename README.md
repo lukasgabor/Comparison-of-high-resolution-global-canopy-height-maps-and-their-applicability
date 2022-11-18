@@ -3,38 +3,34 @@
 This repository was created as a supporting material for the article comparing high-resolution global canopy height maps and exploring their applicability to biodiversity modeling in temperate biomes.
 
 **What is the research about?**
+
 Being directly linked to aboveground biomass and biodiversity, forest canopy height is a high-priority variable to be monitored from space. Recently, two global canopy height maps have been released, the Global Forest Canopy Height Map (GFCH) and the High-Resolution Canopy Height Model of the Earth (HRCH). We assessed their accuracy using canopy height models derived from airborne laser scanning in three areas of the temperate biome. Our results show the presence of large errors in the evaluated maps. The RMSE of GFCH was between 7-8 m while the RMSE of HRCH was between 10-16 m. HRCH was less sensitive to variation in vegetation height, resulting in poor estimates of canopy horizontal heterogeneity. Canopy height estimates in both maps were equally affected by terrain slope and orientation. Finally, biodiversity models using global canopy height maps lead to a considerable decrease in models’ discrimination ability and to mischaracterization of species niches.
 
 **Relevant paper:**
 Here I will add the paper citation
 
-Code authors: [Vítězslav Moudrý](https://scholar.google.cz/citations?user=aSI2lNEAAAAJ&hl=cs),
-[Lukáš Gábor](https://scholar.google.cz/citations?user=pLQXY5wAAAAJ&hl=cs)
+Code authors: [Vítězslav Moudrý](https://scholar.google.cz/citations?user=aSI2lNEAAAAJ&hl=cs), [Lukáš Gábor](https://scholar.google.cz/citations?user=pLQXY5wAAAAJ&hl=cs)
 
 Cite the code:
-
-Cite the data:
               
-Date: 11/15/2022
-
-**Environmental and species data**
-
-***Workflow 1 - virtual environmental data + virtual species***
-
-As both, environemtal and species data have been simulated there is no need to download any. Just follow attached R script. 
-
-***Workflow 2 - real environmental data + virtual species***
-
-Environmental data are available for download on [Download Center of Autonomous body National Center for Geographic Information web site](https://centrodedescargas.cnig.es/CentroDescargas/locale?request_locale=en#) (amount of forest, amount of grassland, elevation). Aspect and topography wetness index were derived from the elevation.
-
-***Workflow 3 - real environmental data + real species***
-
-Band-tailed Pigeon dataset can be downloaded [here](https://www.sciencebase.gov/catalog/item/5eb4485182ce25b5135abeea). Environmental data used for Band-tailed Pigeon SDMs are available for download on [modis](https://modis.gsfc.nasa.gov/) (Mean winter EVI, ), [chelsea](https://chelsa-climate.org/) (Seasonality of precipitation, Mean annual temperature, ), [earthenv](https://www.earthenv.org/) (Cloud cover, Terrain ruggedness, EVI spatial heterogeneity), [soilgrids](https://www.soilgrids.org/) (Soil clay content, Soil silt content), [envidat](https://www.envidat.ch/#/) (Growing season precipitation).
+Date: 11/17/2022
 
 **File Description:**
 
-R_script_workflow1: Step-by-step guideline which allow replication of Workflow 1 from generating virtual data to plotting results. 
+R_script_Raster_Profiles: Step-by-step guideline to generate profiles such as the examples in Figure 1b in the manuscript. This allows the readers to assess the accuracy of global canopy height maps within the three study areas.
 
-R_script_workflow2: Step-by-step guideline which allow replication of Workflow 2 from generating virtual species to plotting results. 
+R_script_Virtual_species_niche: Step-by-step guideline to generate the probability of species occurrence with respect to canopy height or habitat heterogeneity estimated with generalized linear models using ALS canopy height, GFCH map, and HRCH map
 
-R_script_workflow3: Step-by-step guideline which allow replication of Workflow 3 from simulating positional error in occurrence data to plotting results.
+**Canopy Height Models**
+
+The original airborne laser scanning data used for the generation of the canopy height models were sourced from the [LINZ Data Service](https://data.linz.govt.nz/) and licensed for reuse under the CC BY 4.0 licence; the [Federal Office of Topography swisstopo](https://www.swisstopo.admin.ch/en/geodata/height/surface3d.html); and the [U.S. Geological Survey](https://apps.nationalmap.gov/downloader/).
+
+[Global Forest Canopy Height Map (GFCH)](https://glad.umd.edu/dataset/gedi) and a [high-resolution canopy height model of the Earth (HRCH)](https://langnico.github.io/globalcanopyheight/) are provided free of charge, without restriction of use under Creative Commons Attribution 4.0 International License. Publications, models and data products that make use of these datasets must include proper acknowledgement.
+
+*P. Potapov, X. Li, A. Hernandez-Serna, A. Tyukavina, M.C. Hansen, A. Kommareddy, A. Pickens, S. Turubanova, H. Tang, C.E. Silva, J. Armston, R. Dubayah, J. B. Blair, M. Hofton (2021) Mapping and monitoring global forest canopy height through integration of GEDI and Landsat data. Remote Sensing of Environment, 112165. https://doi.org/10.1016/j.rse.2020.112165*
+
+*Lang, N., Jetz, W., Schindler, K., & Wegner, J. D. (2022). A high-resolution canopy height model of the Earth. arXiv preprint arXiv:2204.08322.*
+
+Used canopy height models can be downloaded from the Zenodo repository.
+
+Cite the data:
