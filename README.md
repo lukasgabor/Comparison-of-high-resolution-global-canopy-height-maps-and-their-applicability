@@ -25,7 +25,7 @@ Used canopy height data can be downloaded from the Zenodo repository, where EBR 
 
 ***Cite the data***
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7332572.svg)](https://doi.org/10.5281/zenodo.7332572)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7697253.svg)](https://doi.org/10.5281/zenodo.7697253)
 
 **Files Description:**
 
